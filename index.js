@@ -28,7 +28,7 @@ function isPangram(string) {
 }
 */
 
-
+/*
 // Вариант с циклом
 function deepCount(a) {
     let count = a.length;
@@ -41,3 +41,16 @@ function deepCount(a) {
     return a.reduce((s, e) => s + (Array.isArray(e) ? deepCount(e) : 0), a.length);
 }
 */
+
+
+
+const box = document.querySelector('.box');
+const btnClick = document.querySelector('button');
+
+btnClick.addEventListener('click', changeWidth);
+
+function changeWidth() {
+    box.style.height = box.scrollHeight + 'px';
+}
+
+console.log(box.getBoundingClientRect());
